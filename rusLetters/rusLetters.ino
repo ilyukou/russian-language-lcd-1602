@@ -10,7 +10,7 @@ byte i2[8] = { // Й
   B10101,
   B10101,
   B11001,
-  B10001
+  B00000
 };
 
 byte g[8] = { // Г
@@ -21,7 +21,7 @@ byte g[8] = { // Г
   B10000,
   B10000,
   B10000,
-  B10000    
+  B00000    
 };
 
 byte l[8] = { // Л
@@ -29,10 +29,10 @@ byte l[8] = { // Л
     B00100,
     B01010,
     B01010,
-    B01010,
     B10001,
     B10001,
-    B10001    
+    B10001,
+    B00000    
 };
 byte i[8] = { // И
   B10001,
@@ -41,8 +41,8 @@ byte i[8] = { // И
     B10101,
     B10101,
     B11001,
-    B11001,
-    B10001
+    B10001,
+    B00000
 };
 
 byte zh[8] ={ // Ж
@@ -53,7 +53,7 @@ byte zh[8] ={ // Ж
     B00100,
     B01110,
     B10101,
-    B10101
+    B00000
 };
 
 byte ya[8] = { // Я
@@ -63,19 +63,19 @@ byte ya[8] = { // Я
   B01111,
   B00101,
   B01001,
-  B01001,
-  B10001
+  B10001,
+  B00000
 };
 
 byte d[8] = { // Д
-  B00001,
   B00011,
   B00101,
   B01001,
   B01001,
   B01001,
   B11111,
-  B10001
+  B10001,
+  B00000
 };
 
 
@@ -96,13 +96,37 @@ void setup() {
 }
 
 void loop() {
-   lcd.setCursor(0,1);
-   lcd.print(char(0));   
-   lcd.print(char(1));
-   lcd.print(char(2));
+   lcd.setCursor(0,0);
+   
+   lcd.print("HACTPO");
+   lcd.print(char(0)); 
+   lcd.print("KA");
+   delay(1000);
+   lcd.clear();  
+   
+   lcd.print("Y");
+   lcd.print(char(1)); 
+   lcd.print("O");
+   lcd.print(char(2)); 
+   delay(1000);
+   lcd.clear();
+   
    lcd.print(char(3));
+   lcd.print(char(2));
    lcd.print(char(4));
-   lcd.print(char(5)); 
+   lcd.print("HA");
+   delay(1000);
+   lcd.clear();
+
+   lcd.print("BPEM");
+   lcd.print(char(5));
+   delay(1000);
+   lcd.clear();
+   
+   lcd.print("PE");
    lcd.print(char(6));
-   delay(5000);
+   lcd.print(char(4));  
+   lcd.print("M");
+   delay(1000);
+   lcd.clear();
 }
